@@ -428,25 +428,27 @@ header {
     header .header__nav .social__in {
       background: url("../img/social icons/in.png") no-repeat center;
       background-size: contain; }
-  header h1 {
-    display: block;
+  header .header__h {
+    position: absolute;
+    top: 40%;
     font-family: 'Gotham Pro';
-    font-weight: bold;
-    font-size: 122px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    text-align: center;
-    color: #ffffff;
-    letter-spacing: -0.03em; }
-    header h1:after {
-      content: 'Power by PSDfreebies.com';
+    font-weight: bold; }
+    header .header__h h1 {
+      font-size: 122px;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      margin: 0; }
+    header .header__h span {
       display: block;
       width: 100%;
       text-align: center;
-      font-size: 0.2em;
+      font-size: 25px;
       color: #11749e;
-      letter-spacing: 0.45em; }
+      letter-spacing: 0.6em; }
   header .scroll__down {
+    position: absolute;
+    top: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -508,8 +510,8 @@ header {
   width: 100%;
   background: #11749e;
   color: #ffffff;
-  padding-top: 170px;
-  z-index: 2; }
+  padding-top: 100px;
+  z-index: -2; }
   .about h2 {
     position: relative;
     font-family: "Gotham-Medium" , sans-serif;
@@ -517,16 +519,17 @@ header {
     margin: 0 0 140px 0; }
   .about__bg {
     position: absolute;
-    top: 25%;
+    top: 0;
     left: 50%;
     font-size: 155px;
     font-family: "Roboto" , sans-serif;
     font-weight: bold;
-    color: #7b7b7b;
+    color: #ffffff;
     z-index: -1;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    -webkit-transform: translate(-50%, 0.2em);
+        -ms-transform: translate(-50%, 0.2em);
+            transform: translate(-50%, 0.2em);
+    opacity: 0.18; }
   .about .about__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -535,4 +538,66 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    max-width: 1200px; }
+    max-width: 1200px;
+    margin-bottom: 120px; }
+  .about__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 25%;
+    margin: 0 15px; }
+    .about__block__image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 130px;
+      width: 130px;
+      background: #2e85aa;
+      border-radius: 50%;
+      margin-bottom: 20px; }
+      .about__block__image i {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        color: white; }
+    .about__block__title {
+      font-size: 18px;
+      font-family: "Gotham-Medium" ,sans-serif;
+      margin-bottom: 30px; }
+    .about__block p {
+      font-family: Gotham-Book , sans-serif;
+      font-size: 15px;
+      text-align: center;
+      margin: 0; }
+
+#about__block1 i {
+  background: url("../img/about/Write.png") no-repeat center;
+  background-size: contain; }
+
+#about__block2 i {
+  background: url("../img/about/Write.png") no-repeat center;
+  background-size: contain; }
+
+#about__block3 i {
+  background: url("../img/about/Search.png") no-repeat center;
+  background-size: contain; }
+
+#about__block4 i {
+  background: url("../img/about/Simon-says.png") no-repeat center;
+  background-size: contain; }

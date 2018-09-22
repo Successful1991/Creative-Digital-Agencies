@@ -7,8 +7,8 @@
   width: 100%;
   background: #11749e;
   color: #ffffff;
-  padding-top: 170px;
-  z-index: 2;
+  padding-top: 100px;
+  z-index: -2;
   h2{
     position: relative;
     font-family: "Gotham-Medium" , sans-serif;
@@ -17,19 +17,72 @@
   }
   &__bg{
     position: absolute;
-    top: 25%;
+    top: 0;
     left:50%;
     font-size: 155px;
     font-family: "Roboto" , sans-serif;
     font-weight: bold;
-    color: #7b7b7b;
+    color: #ffffff;
     z-index: -1;
-    transform: translateX(-50%);
+    transform: translate(-50%,0.2em);
+    opacity: 0.18;
   }
   .about__wrapper{
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 1200px;
+    margin-bottom: 120px;
   }
+  &__block {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 0 15px;
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 130px;
+      width: 130px;
+      background: #2e85aa;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      i {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        color: white;
+      }
+    }
+    &__title{
+      font-size: 18px;
+      font-family: "Gotham-Medium" ,sans-serif;
+      margin-bottom:30px;
+    }
+    p{
+      font-family: Gotham-Book , sans-serif;
+      font-size: 15px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+#about__block1 i{
+  background: url("../img/about/Write.png")no-repeat center;
+  background-size: contain;
+}
+#about__block2 i{
+  background: url("../img/about/Write.png")no-repeat center;
+  background-size: contain;
+}
+#about__block3 i{
+  background: url("../img/about/Search.png")no-repeat center;
+  background-size: contain;
+}
+#about__block4 i{
+  background: url("../img/about/Simon-says.png")no-repeat center;
+  background-size: contain;
 }

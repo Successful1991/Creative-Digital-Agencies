@@ -93,27 +93,31 @@ header{
       }
     }
   }
-  h1{
-    display: block;
+  .header__h{
+    position: absolute;
+    top:40%;
     font-family: 'Gotham Pro';
     font-weight: bold;
-    font-size: 122px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    text-align: center;
-    color: #ffffff;
-    letter-spacing: -0.03em;
-    &:after{
-      content: 'Power by PSDfreebies.com';
-      display: block;
-      width: 100%;
-      text-align: center;
-      font-size: 0.2em;
-      color: #11749e;
-      letter-spacing: 0.45em;
+    h1{
+       font-size: 122px;
+       text-transform: uppercase;
+       color: #ffffff;
+       letter-spacing: -0.03em;
+       margin: 0;
+     }
+    span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        color: #11749e;
+        letter-spacing: 0.6em;
     }
   }
+
   .scroll__down{
+    position: absolute;
+    top:70%;
     display: flex;
     justify-content: center;
     align-items: center;
