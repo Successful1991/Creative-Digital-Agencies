@@ -1,0 +1,149 @@
+$nav_height: 115px;
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: url("../img/header/header__bg.jpg")no-repeat center;
+  background-size: cover;
+  .header__wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    height: $nav_height;
+    &:after{
+      content: "";
+      position: fixed;
+      top: $nav_height;
+      left: 0;
+      display: flex;
+      width: 100%;
+      height: 0;
+      border-bottom: 1px solid #7b7b7b;
+    }
+    .logo{
+      display: inline-block;
+      margin-right: auto;
+      height: 75px;
+      width: 79px;
+      background: url("../img/logo.png")no-repeat center;
+      background-size: contain;
+    }
+    nav{
+      ul{
+        display: flex;
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        font-family: "Myriad Pro";
+        font-size: 20px;
+        li{
+          margin: 0 10px;
+          a{
+            position: relative;
+            padding: 0 10px;
+            text-decoration: none;
+            color: #ffffff;
+          }
+          &:hover{
+            a:after{
+              content: "";
+              position: absolute;
+              top: 64px;
+              display: flex;
+              height: 0;
+              width: 100%;
+              border-bottom: 4px solid blue;
+            }
+          }
+        }
+      }
+    }
+    .social{
+      a{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 10px;
+      }
+      &__fb{
+        background: url("../img/social icons/fb.png")no-repeat center;
+        background-size: contain;
+      }&__twitter{
+        background: url("../img/social icons/twiter.png")no-repeat center;
+        background-size: contain;
+      }&__skype{
+        background: url("../img/social icons/skype.png")no-repeat center;
+        background-size: contain;
+      }&__in{
+        background: url("../img/social icons/in.png")no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+  h1{
+    display: block;
+    font-family: 'Gotham Pro';
+    font-weight: bold;
+    font-size: 122px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+    &:after{
+      content: 'Power by PSDfreebies.com';
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 0.2em;
+      color: #11749e;
+      letter-spacing: 0.45em;
+    }
+  }
+  .scroll__down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    &__text {
+      font-family: "OpenSans", sans-serif;
+      font-size: 13px;
+      color: #ffffff;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+    &__button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65px;
+      width: 65px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      background: none;
+      &:before{
+        content: '';
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        background: url("../img/header/arrow__down.png")no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}
+

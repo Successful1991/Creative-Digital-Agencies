@@ -1,0 +1,35 @@
+.about{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: #11749e;
+  color: #ffffff;
+  padding-top: 170px;
+  z-index: 2;
+  h2{
+    position: relative;
+    font-family: "Gotham-Medium" , sans-serif;
+    font-size: 37.5px;
+    margin: 0 0 140px 0;
+  }
+  &__bg{
+    position: absolute;
+    top: 25%;
+    left:50%;
+    font-size: 155px;
+    font-family: "Roboto" , sans-serif;
+    font-weight: bold;
+    color: #7b7b7b;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  .about__wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
