@@ -1,0 +1,82 @@
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%; }
+  .news__article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .news__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 50%; }
+  .news__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    font-family: "Gotham-Book" , sans-serif; }
+    .news__content__time {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 15px; }
+      .news__content__time time {
+        padding-right: 10px;
+        margin-right: 10px; }
+    .news__content h3 {
+      font-size: 25px;
+      margin: 0 0 25px 0;
+      font-family: "Gotham-Medium" , sans-serif;
+      font-weight: normal; }
+  .news__image {
+    width: 50%;
+    height: auto; }
+
+.news-1 .news__wrapper {
+  color: #ffffff;
+  background: #222222; }
+
+.news-1 .news__content {
+  padding-right: 80px; }
+  .news-1 .news__content__time time {
+    border-right: 1px solid #ffffff; }
+
+.news-2 .news__wrapper {
+  color: #222222;
+  background: #f3f3f3; }
+
+.news-2 .news__content {
+  padding-left: 80px; }
+  .news-2 .news__content__time time {
+    border-right: 1px solid #222222; }
+
+#news__image-1 {
+  background: url("../img/news/Layer88.jpg") no-repeat center;
+  background-size: cover; }
+
+#news__image-2 {
+  background: url("../img/news/Layer90.jpg") no-repeat center;
+  background-size: cover; }

@@ -23,7 +23,12 @@
   src: url('../fonts/RobotoCondensed-Regular.ttf');
 }
 
+*{
+  box-sizing: border-box;
+}
+
 @import "reset";
 @import "header";
 @import "about";
+@import "news";
 
