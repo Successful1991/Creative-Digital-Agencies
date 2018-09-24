@@ -9,7 +9,7 @@
   }
   &__wrapper{
     display: flex;
-    justify-content: flex-end;
+    //justify-content: flex-end;
     width: 50%;
   }
   &__content{
@@ -22,8 +22,10 @@
     padding-top: 80px;
     padding-bottom: 100px;
     font-family: "Gotham-Book" , sans-serif;
+    font-size: 1.5rem;
     &__time{
       display: flex;
+      font-size: 1.3rem;
       margin-bottom: 15px;
       time{
         padding-right: 10px;
@@ -31,7 +33,7 @@
       }
     }
     h3{
-      font-size: 25px;
+      font-size: 2.5rem;
       margin: 0 0 25px 0;
       font-family: "Gotham-Medium" , sans-serif;
       font-weight: normal;
@@ -44,6 +46,7 @@
 }
 .news-1{
   .news__wrapper{
+    justify-content: flex-end;
     color: #ffffff;
     background: #222222;
   }
@@ -56,6 +59,7 @@
 }
 .news-2{
   .news__wrapper{
+    justify-content: flex-start;
     color: #222222;
     background: #f3f3f3;
   }
