@@ -27,4 +27,16 @@
   }
 }
 
-
+@media (max-width: 768px) {
+  .area{
+    padding-top: 40px;
+  }
+  .area__wrapper{
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .area__content{
+    width: 80%;
+    margin: 20px;
+  }
+}

@@ -11,6 +11,7 @@
   }
   .about__wrapper{
     @include  wrapper__content;
+
   }
   &__block {
     display: flex;
@@ -18,7 +19,7 @@
     align-items: center;
     justify-content: center;
     width: 25%;
-    margin: 0 15px;
+    margin: 0 15px 40px;
     &__image {
       display: flex;
       justify-content: center;
@@ -63,4 +64,24 @@
 #about__block4 i{
   background: url("../img/about/Simon-says.png")no-repeat center;
   background-size: contain;
+}
+@media (max-width: 854px){
+  .about__wrapper{
+    flex-wrap: wrap;
+  }
+  .about__block{
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about h2{
+    margin-bottom: 80px;
+  }
+  .about__block{
+    flex-basis: 100%;
+  }
+  .about .about__wrapper{
+    margin: 0;
+  }
 }

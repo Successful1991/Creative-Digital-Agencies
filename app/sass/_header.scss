@@ -1,34 +1,37 @@
 $nav_height: 115px;
-header{
+header {
   @include sections;
   position: static;
   height: 100vh;
-  background: url("../img/header/header__bg.jpg")no-repeat center;
+  background: url("../img/header/header__bg.jpg") no-repeat center;
   background-size: cover;
-  .header__wrapper{
+}
+.header{
+  &__wrapper{
     display: flex;
     justify-content: center;
     width: 100%;
     z-index: 1000;
   }
-  .header__nav{
+  &__nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1200px;
+  height: $nav_height;
+  margin: 0 15px;
+  &:after{
+    content: "";
+    position: absolute;
+    top: $nav_height;
+    left: 0;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
     width: 100%;
-    max-width: 1200px;
-    height: $nav_height;
-    &:after{
-      content: "";
-      position: absolute;
-      top: $nav_height;
-      left: 0;
-      display: flex;
-      width: 100%;
-      height: 0;
-      border-bottom: 1px solid #7b7b7b;
-    }
-    .logo{
+    height: 0;
+    border-bottom: 1px solid #7b7b7b;
+  }
+  .logo{
       display: inline-block;
       margin-right: auto;
       height: 75px;
@@ -36,42 +39,15 @@ header{
       background: url("../img/logo.png")no-repeat center;
       background-size: contain;
     }
-    nav{
-      ul{
-        display: flex;
-        margin:0;
-        padding:0;
-        list-style-type: none;
-        font-family: "Myriad Pro";
-        font-size: 2rem;
-        li{
-          margin: 0 10px;
-          a{
-            position: relative;
-            padding: 0 10px;
-            text-decoration: none;
-            color: #ffffff;
-          }
-          &:hover{
-            a:after{
-              content: "";
-              position: absolute;
-              top: 64px;
-              display: flex;
-              height: 0;
-              width: 100%;
-              border-bottom: 4px solid blue;
-            }
-          }
-        }
-      }
-    }
-    .social{
+  .social{
       a{
         display: inline-block;
         height: 20px;
         width: 20px;
         margin: 0 10px;
+        &:nth-last-child(1){
+          margin-right: 0;
+        }
       }
       &__fb{
         background: url("../img/social icons/fb.png")no-repeat center;
@@ -87,27 +63,69 @@ header{
         background-size: contain;
       }
     }
+}
+  &__h{
+  position: absolute;
+  top:40%;
+  font-family: 'Gotham Pro';
+  font-weight: bold;
+  text-align: center;
+  h1{
+    letter-spacing: -0.03em;
+    margin: 0;
   }
-  .header__h{
-    position: absolute;
-    top:40%;
-    font-family: 'Gotham Pro';
-    font-weight: bold;
-    h1{
-       letter-spacing: -0.03em;
-       margin: 0;
-     }
-    span{
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-size: 2.5rem;
-        color: #11749e;
-        letter-spacing: 0.6em;
+  span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #11749e;
+    letter-spacing: 0.6em;
+  }
+}
+}
+nav{
+  .burger{
+    display: none;
+    width: 30px;
+    margin-right: 40px;
+    div{
+      display: block;
+      width: 100%;
+      border: 2px solid #ffffff;
+      margin: 6px 0;
     }
   }
-
-  .scroll__down{
+  ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    font-family: "Myriad Pro";
+    font-size: 2rem;
+    li{
+      margin: 0 10px;
+      a{
+        position: relative;
+        padding: 0 10px;
+        text-decoration: none;
+        color: #ffffff;
+      }
+      &:hover{
+        a:after{
+          content: "";
+          position: absolute;
+          top: 64px;
+          display: flex;
+          height: 0;
+          width: 100%;
+          border-bottom: 4px solid blue;
+        }
+      }
+    }
+  }
+}
+.scroll__down{
     position: absolute;
     top:70%;
     display: flex;
@@ -141,5 +159,45 @@ header{
       }
     }
   }
+
+
+@media (max-width: 950px){
+  nav ul li {
+      margin: 0;
+    }
+  .header__h span{
+    letter-spacing: 0.4em;
+    font-size: 2.4rem;
+  }
 }
 
+@media (max-width: 854px){
+  .header__nav .social a{
+    margin: 0 5px;
+  }
+  .header__h span{
+    letter-spacing: 0.3em;
+    font-size: 2.2rem;
+  }
+  nav ul {
+      font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px){
+  .header__h h1{
+    letter-spacing: 0;
+  }
+  .header__h span{
+    letter-spacing: 0;
+    font-size: 2rem;
+  }
+  nav{
+    .burger {
+      display: block;
+    }
+    ul {
+      display: none;
+    }
+  }
+}

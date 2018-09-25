@@ -10,18 +10,20 @@
   }
   .blog__bg{
     @include bg__letter;
+    font-size: 250px;
+    top: 25px;
     color: #7b7b7b;
   }
   &__wrapper{
     @include wrapper__content;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   &__content{
     display: flex;
     flex-direction:column;
     align-items: center;
     width: 25%;
-    margin: 0 15px;
+    margin: 0 15px 40px;
     img{
       height: auto;
       width: 100%;
@@ -33,6 +35,7 @@
       font-family: "Gotham-Medium",sans-serif;
       font-weight: normal;
       font-size: 1.8rem;
+      text-align: center;
       color: #11749e;
     }
     p{
@@ -41,5 +44,19 @@
       font-size: 1.5rem;
       margin: 0;
     }
+  }
+}
+
+@media (max-width: 854px){
+  .blog__wrapper{
+    flex-wrap: wrap;
+  }
+  .blog__content{
+    flex-basis: 40%;
+  }
+}
+@media (max-width: 768px){
+  .blog__content{
+    flex-basis: 100%;
   }
 }

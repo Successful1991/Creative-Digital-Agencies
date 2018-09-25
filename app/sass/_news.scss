@@ -63,8 +63,10 @@
   .news__content{
     padding-left:80px;
     padding-right:15px;
+    &__time time{
       border-right: 1px solid #222222;
     }
+  }
 }
 
 #news__image-1{
@@ -74,4 +76,32 @@
 #news__image-2{
   background: url("../img/news/Layer90.jpg")no-repeat center;
   background-size: cover;
+}
+
+@media (max-width: 854px){
+  .news__article{
+    justify-content: center;
+    flex-wrap: wrap;
+    &:nth-child(1){
+      flex-wrap: wrap-reverse;
+    }
+  }
+  .news__article .news__wrapper{
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+  }
+  .news-1 .news__content,.news-2 .news__content{
+    padding: 0 15px;
+  }
+  .news__image{
+    height: 250px;
+    width: 100%;
+  }
+  .news__content{
+    padding: 40px;
+    &__time{
+      justify-content: center;
+    }
+  }
 }
