@@ -22,6 +22,7 @@
   font-family: "RobotoCondensed";
   src: url('../fonts/RobotoCondensed-Regular.ttf');
 }
+@import "reset";
 
 *{
   box-sizing: border-box;
@@ -29,9 +30,29 @@
 html{
   font-size: 62.5%;
 }
+h1{
+  font-size: 12.2rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+h2{
+  font-family: "Gotham-Medium" , sans-serif;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+}
+h3{
+  font-family: "Gotham-Book" , sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+h4{
+  font-family: "Gotham-Medium" , sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
 
 
-@import "reset";
+
 @import "mixins";
 @import "header";
 @import "about";
@@ -39,4 +60,5 @@ html{
 @import "blog";
 @import "area";
 @import "feature";
+@import "team";
 
