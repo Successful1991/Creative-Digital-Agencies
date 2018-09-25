@@ -16,16 +16,6 @@
   }
   &__bg{
     @include bg__letter;
-    //position: absolute;
-    //top: 0;
-    //left:50%;
-    //font-size: 155px;
-    //font-family: "Roboto" , sans-serif;
-    //font-weight: bold;
-    //color: #ffffff;
-    //z-index: -1;
-    //transform: translate(-50%,0.2em);
-    //opacity: 0.18;
   }
   .about__wrapper{
     @include  wrapper__content;

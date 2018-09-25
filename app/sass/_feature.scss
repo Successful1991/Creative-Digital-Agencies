@@ -1,0 +1,59 @@
+.feature{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  background: url("../img/faeture/Rectangle6.jpg")no-repeat center;
+  background-size: cover;
+  padding-top: 100px;
+  &__wrapper{
+    @include wrapper__content;
+    margin-bottom: 100px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    font-family:"Gotham-Book";
+    font-size: 1.5rem;
+    h3{
+      font-family:"Gotham-Medium",sans-serif;
+      font-size: 2.5rem;
+    }
+    p{
+      margin-bottom: 60px;
+    }
+    .advantagesList{
+      font-family: "Gotham-Medium",sans-serif;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li{
+        background: #11749e;
+        padding-left: 15px;
+        margin-bottom: 24px;
+        line-height: 38px;
+        text-transform: uppercase;
+        &:nth-child(1){
+          width: 65%;
+        }
+        &:nth-child(2){
+          width: 70%;
+        }
+        &:nth-child(3){
+          width: 75%;
+        }
+      }
+    }
+    &__phone{
+      height: 650px;
+      width: 55%;
+      background: url("../img/faeture/Rectangle.png")no-repeat center;
+      background-size: contain;
+      margin: 0 auto;
+    }
+  }
+}

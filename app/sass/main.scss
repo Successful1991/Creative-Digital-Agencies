@@ -29,30 +29,14 @@
 html{
   font-size: 62.5%;
 }
-@mixin bg__letter{
-  position: absolute;
-  top: 80px;
-  left:50%;
-  font-size: 15.5rem;
-  font-family: "Roboto" , sans-serif;
-  font-weight: bold;
-  color: #ffffff;
-  z-index: 0;
-  transform: translateX(-50%);
-  opacity: 0.18;
-}
 
-@mixin wrapper__content{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 120px;
-}
 
 @import "reset";
+@import "mixins";
 @import "header";
 @import "about";
 @import "news";
 @import "blog";
+@import "area";
+@import "feature";
 

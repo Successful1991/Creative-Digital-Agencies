@@ -9,7 +9,6 @@
   }
   &__wrapper{
     display: flex;
-    //justify-content: flex-end;
     width: 50%;
   }
   &__content{
@@ -52,6 +51,7 @@
   }
   .news__content{
     padding-right:80px;
+    padding-left:15px;
     &__time time{
       border-right: 1px solid #ffffff;
     }
@@ -65,11 +65,11 @@
   }
   .news__content{
     padding-left:80px;
-    &__time time{
+    padding-right:15px;
       border-right: 1px solid #222222;
     }
-  }
 }
+
 #news__image-1{
   background: url("../img/news/Layer88.jpg")no-repeat center;
   background-size: cover;
