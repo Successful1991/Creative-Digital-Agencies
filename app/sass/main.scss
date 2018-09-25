@@ -39,6 +39,7 @@ h2{
   font-family: "Gotham-Medium" , sans-serif;
   font-size: 3.75rem;
   text-transform: uppercase;
+  font-weight: normal;
 }
 h3{
   font-family: "Gotham-Book" , sans-serif;
@@ -51,8 +52,6 @@ h4{
   font-weight: normal;
 }
 
-
-
 @import "mixins";
 @import "header";
 @import "about";
@@ -61,4 +60,6 @@ h4{
 @import "area";
 @import "feature";
 @import "team";
+@import "contact";
+@import "footer";
 

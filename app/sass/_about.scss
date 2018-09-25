@@ -1,10 +1,5 @@
 .about{
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+  @include sections;
   background: #11749e;
   color: #ffffff;
   padding-top: 150px;

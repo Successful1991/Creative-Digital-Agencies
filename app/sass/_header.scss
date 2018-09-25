@@ -1,20 +1,15 @@
 $nav_height: 115px;
 header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  @include sections;
+  position: static;
   height: 100vh;
-  width: 100%;
   background: url("../img/header/header__bg.jpg")no-repeat center;
   background-size: cover;
   .header__wrapper{
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     width: 100%;
+    z-index: 1000;
   }
   .header__nav{
     display: flex;
@@ -25,7 +20,7 @@ header{
     height: $nav_height;
     &:after{
       content: "";
-      position: fixed;
+      position: absolute;
       top: $nav_height;
       left: 0;
       display: flex;
