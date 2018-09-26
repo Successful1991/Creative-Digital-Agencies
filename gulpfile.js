@@ -7,13 +7,14 @@ var browserSync = require('browser-sync').create();
 var cssmin = require('gulp-cssmin');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-
+var pump = require('pump');
 
 var sourcemaps = require("gulp-sourcemaps");
 var babel = require("gulp-babel");
 var concat = require("gulp-concat");
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
+var gulpsync = require('gulp-sync')(gulp);
 
 //--server--//
 gulp.task('server', function() {
@@ -48,16 +49,6 @@ gulp.task('browser-sync', function() {
 		}});
 });
 
-// gulp.task('jsx', function () {
-//   return gulp.src('app/js/index.js')
-//     .pipe(sourcemaps.init())
-//     .pipe(babel({
-//       presets: ['@babel/env']
-//     }))
-//     //.pipe(concat('all.js'))
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('build/js'));
-// });
 
 gulp.task('min-js', function (cb) {
   pump([
@@ -73,14 +64,14 @@ gulp.task('min-js', function (cb) {
   );
 });
 
-gulp.task('image-min', () =>
-  gulp.src(['app/img/*','app/img/**/*'])
+gulp.task('image-min', function() {
+  gulp.src(['app/img/*', 'app/img/**/*'])
     .pipe(imagemin())
     .pipe(gulp.dest('build/img'))
-);
+});
 
 gulp.task('min-css', function () {
-  gulp.src('app/css/*.css')
+  gulp.src('app/css/main.css')
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('build/css'));
@@ -97,4 +88,5 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
-gulp.task('compile', ['clean','min-js','image-min','min-css','transfer-font','transfer-min']);
+//gulp.task('compile', ['clean','min-js','image-min','min-css','transfer-font']);
+gulp.task('compile', gulpsync.sync(['clean','min-js','image-min','min-css','transfer-font']));
