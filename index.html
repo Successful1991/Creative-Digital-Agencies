@@ -10,7 +10,7 @@
 	<title>TEST</title>
 </head>
 <body>
-   <header>
+   <header id="home">
 	   <div class="header__wrapper">
 		   <div class="header__nav">
 			   <div class="logo"></div>
@@ -21,12 +21,12 @@
 					   <div></div>
 				   </div>
 				   <ul>
-					   <li><a href="">Home</a></li>
-					   <li><a href="">Pages</a></li>
-					   <li><a href="">Features</a></li>
-					   <li><a href="">Extensions</a></li>
-					   <li><a href="">Tutorials</a></li>
-					   <li><a href="">Contact us</a></li>
+					   <li><a href="#home">Home</a></li>
+					   <li><a href="#pages">Pages</a></li>
+					   <li><a href="#features">Features</a></li>
+					   <li><a href="#extensions">Extensions</a></li>
+					   <li><a href="#tutorials">Tutorials</a></li>
+					   <li><a href="#contact">Contact us</a></li>
 				   </ul>
 			   </nav>
 			   <div class="social">
@@ -43,7 +43,7 @@
 	   </section>
 	   <div class="scroll__down">
 		   <div class="scroll__down__text">Scroll Down</div>
-		   <button class="scroll__down__button"></button>
+		   <a href="#footer" class="scroll__down__button"></a>
 	   </div>
    </header>
    <main>
@@ -162,7 +162,7 @@
 			   </div>
 		   </div>
 	   </div>
-	   <div class="feature">
+	   <div class="feature" id="features">
 		   <div class="feature__wrapper">
 			   <div class="feature__content">
 				   <h4>Akita Inu Dog</h4>
@@ -215,7 +215,7 @@
 			   </div>
 		   </div>
 	   </div>
-	   <div class="contact">
+	   <div class="contact" id="contact">
 		   <h2>We’d love to hear about your project.</h2>
 		   <span class="contact__bg">c</span>
 		   <form action="#" name="order" id="contact__form">
@@ -227,7 +227,7 @@
 		   </form>
 	   </div>
    </main>
-   <footer>
+   <footer id="footer">
 	   <div class="map"></div>
 	   <div class="footer__wrap">
 		   <div class="copyrighted">© 2016 PSDfreebies.com – All Right Reserved</div>
