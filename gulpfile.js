@@ -89,4 +89,3 @@ gulp.task('clean', function () {
 });
 
 //gulp.task('compile', ['clean','min-js','image-min','min-css','transfer-font']);
-gulp.task('compile', gulpsync.sync(['clean','min-js','image-min','min-css','transfer-font']));
